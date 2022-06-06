@@ -1,10 +1,13 @@
 "use strict"
 
-const express = require("express")
+const express = require("express");
+const cors = request("cors");
+const http = request("http");
 
 class App{
     static async init(){
         let app = new express();
+        app.use(cors());
         app.use(express.json);
 
 
