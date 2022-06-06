@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/souza99/projetoAPI2022#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.1",
     "nodemon": "^2.0.16"
   }
