@@ -4,6 +4,7 @@ const { json } = require("express");
 const CounterRoute = require("./routes/CounterRoute")
 const UserRoute = require("./routes/UserRoute")
 const CharacterRoute = require("./routes/CharacterRoute")
+const AbilityRoute = require("./routes/AbilityRoute")
 const porta = process.env.PORT || 3000;
 
 var contador = 1;
@@ -42,6 +43,7 @@ class App {
         new CounterRoute(app)
         new UserRoute(app)
         new CharacterRoute(app)
+        new AbilityRoute(app)
     }
 }
 App.init();
