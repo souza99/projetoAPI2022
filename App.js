@@ -21,8 +21,8 @@ class App {
             res.json({
                 name: "ifio-api-2022",
                 version: "1.0.0",
-                description: "Projeto API",
-                author: "Marcelo F. Terenciani"
+                description: "Projeto API ifpr",
+                author: "Joao pedro"
             })
         })
 
