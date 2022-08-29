@@ -1,4 +1,4 @@
-const AbilityService = require("../services/AbilityService")
+const AbilityService = require("../../services/AbilityService")
 
 
 module.exports = class AbilityController {

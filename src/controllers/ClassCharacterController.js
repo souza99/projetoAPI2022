@@ -1,4 +1,4 @@
-const ClassCharacterService = require("../services/ClassCharacterService");
+const ClassCharacterService = require("../../services/ClassCharacterService");
 
 module.exports = class ClassCharacterController{
     static async get(req, res){
