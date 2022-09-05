@@ -1,28 +1,44 @@
-"use strict"
-const e = require("express");
-const mongoose = require("mongoose");
+"use strict";
+const Mongoose = require("mongoose");
 const User = Mongoose.model("User");
 
 module.exports = class UserService {
-
+    static async = buscarPorId(idUser) {
+        try {
+            return await User.findById(idUser);
+        } catch (error) {
+            throw new Error ('UserService.findById: '+ error);
+        }
+    } // buscarPorId ();
     static async buscarTodos () {
         try {
-            return User.find({});
-        }catch(error) {
-            throw new error('Usuario serviced' + e.message);
+            return await User.find({});
+        }   catch (error) {
+            throw new Error('UserService.findAll: '+ error);
         }
-    }
-
-
-    static getUsers() {
-        return { users: users }
-    }
-    static save(user) {
-        users.push(user)
-        return { user: user }
-    }
-
-
-
-   
+    }// buscatodos ();
+    static async criar(user) {
+        try {
+            return await User.create(user);
+        } catch (error) {
+            throw new Error('UserService.criar: ' + error);
+        }
+    }// criar ()
+    static async deletar (user) {
+        try {
+            if (!user._id) {
+                throw new Error('A identificação do usuario deve informar. ');
+            }
+            return await User.findOneAndDelete({_id: user._id});
+        } catch (error) {
+            throw new Error('UserService.deletar: ' + error);
+        }
+    }//deletar ()
+    static async atualizar (user) {
+        try {
+            return await User.findByIdAndUpdate (user._id, user);
+        } catch (error) {
+            throw new Error ('UserService.atualizar: ' + error);
+        }
+    }//atualizar ();
 }
