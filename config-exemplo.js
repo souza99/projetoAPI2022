@@ -16,3 +16,4 @@ class Config {
 }
 
 module.exports = Config.createConfig();
+    
