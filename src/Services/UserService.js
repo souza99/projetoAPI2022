@@ -3,7 +3,8 @@ const Mongoose = require("mongoose");
 const User = Mongoose.model("User");
 
 module.exports = class UserService {
-    static async = buscarPorId(idUser) {
+
+    static async buscarPorId(idUser) {
         try {
             return await User.findById(idUser);
         } catch (error) {
