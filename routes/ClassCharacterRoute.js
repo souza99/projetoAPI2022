@@ -1,4 +1,4 @@
-const ClassCharacterController = require("../controllers/ClassCharacterController")
+const ClassCharacterController = require("../src/controllers/ClassCharacterController")
 
 module.exports = class ClassCharacterRoute {
     constructor(app){

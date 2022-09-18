@@ -1,5 +1,5 @@
 
-const AbilityController = require("../controllers/AbilityController")
+const AbilityController = require("../src/controllers/AbilityController")
 
 module.exports = class AbilityRoute {
     constructor(app) {

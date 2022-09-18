@@ -1,5 +1,5 @@
 
-const ItemController = require("../controllers/ItemController")
+const ItemController = require("../src/controllers/ItemController")
 
 module.exports = class ItemRoute {
     constructor(app) {

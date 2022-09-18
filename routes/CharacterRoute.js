@@ -1,5 +1,5 @@
 
-const CharacterController = require("../controllers/CharacterController")
+const CharacterController = require("../src/controllers/CharacterController")
 
 module.exports = class UserRoute {
     constructor(app) {
