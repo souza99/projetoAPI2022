@@ -3,7 +3,7 @@ const Mongoose = require("mongoose");
 const Ability = Mongoose.model("../modelo/Ability");
 
 module.exports = class AbilityService {
-    static async buscarPorId(idItem) {
+    static async buscarPorId(idAbility) {
         try {
             return await Ability.findById(idAbility);
         } catch (error) {
@@ -29,7 +29,7 @@ module.exports = class AbilityService {
             if (!ability._id) {
                 throw new Error('O identificador da habilidade deve ser informado. ');
             }
-            return await Item.findOneAndDelete({ _id: ability._id });
+            return await Ability.findOneAndDelete({ _id: ability._id });
         } catch (error) {
             throw new Error('abilityService.deletar: ' + error);
         }
