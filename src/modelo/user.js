@@ -4,7 +4,7 @@ const mongoose = requere('mongoose');
 
 module.exports = class User extends mongoose.Schema {
     constructor () {
-        supper({
+        super({
             nome: String,
             sobrenome: String,
             email: String,

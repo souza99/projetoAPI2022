@@ -1,6 +1,6 @@
 "use strict";
 const Mongoose = require("mongoose");
-const User = Mongoose.model("User");
+const User = Mongoose.model("../modelo/user");
 
 module.exports = class UserService {
 

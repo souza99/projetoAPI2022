@@ -1,6 +1,6 @@
 "use strict";
 const Mongoose = require("mongoose");
-const Item = Mongoose.model("Item,");
+const Item = Mongoose.model("../modelo/item");
 
 module.exports = class ItemService {
 
