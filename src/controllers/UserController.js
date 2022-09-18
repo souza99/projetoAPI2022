@@ -1,21 +1,50 @@
 "use strict";
-
-const User = require("../modelo/user");
 const UserService = require("../services/UserService")
 
 module.exports = class UserController {
+
     static async buscarPorId(req, res) {
         try {
-            res.static(200).send(await UserService.buscarPorId(req.params.idUsuario));
-        } catch (e) {
-            res.status(500).send(e.message);
-            console.error('UserController.buscarPorId' + e.message);
+            res.status(200).send(await UserService.buscarPorId(req.params.idUser));
+        } catch (error) {
+            res.status(500).send(error.message);
+            console.error("Usercontroller.buscarPorId" + error.message);
         }
-    }//BuscarPorId();
+    }
 
     static async buscarTodos(req, res) {
         try {
             res.status(200).send(await UserService.buscarTodos());
-        } catch(e){}
+        } catch (error) {
+            res.status(500).send(error.message);
+            console.error("Usercontroller.buscarTodos" + error.message);
+        }
+    }
+
+    static async criar(req, res) {
+        try {
+            res.status(200).send(await UserService.criar(req.body));
+        } catch (error) {
+            res.status(500).send(error.message);
+            console.error("UserContorller.criar" + error.message);
+        }
+    }
+
+    static async deletar(req, res) {
+        try {
+            res.status(200).send(await UserService.deletar(req.body));
+        } catch (error) {
+            res.status(500).send(error.message);
+            console.error("UserController.deletar" + error.message);
+        }
+    }
+
+    static async editar(req, res) {
+        try {
+            res.status(200).send(await UserService.atualizar(req.body));
+        } catch (error) {
+            res.status(500).send(error.message);
+            console.error("UserController.editar" + error.message);
+        }
     }
 }
