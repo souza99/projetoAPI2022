@@ -14,9 +14,9 @@ class FabricaDeConexao {
         };
 
         if (!db.username && !db.password)
-            url = `${db.connectMethod}://${db.url}/${db.name}`;
+            url = `mongodb://${db.url}/${db.name}`;
         else
-            url = `${db.connectMethod}://${db.username}:${db.password}@${db.url}/${db.name}?retryWrites=true&w=majority`;
+            url = `mongodb+srv://${db.username}:${db.password}@${db.url}/${db.name}?retryWrites=true&w=majoriry`;
 
         return mongoose.connect(url, options);
     }
