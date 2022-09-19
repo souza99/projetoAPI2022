@@ -2,6 +2,8 @@
 
 const mongoose = require("mongoose");
 
+
+// PASSE AQUI AS CONFIGURAÇÕES DO SEU BANCO;
 class FabricaDeConexao {
     static async obterConexao() {
         let url;
