@@ -22,4 +22,4 @@ class FabricaDeConexao {
     }
 }
 
-module.exports = FabricaConexao;
+module.exports = FabricaDeConexao;
