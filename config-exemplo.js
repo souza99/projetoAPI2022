@@ -6,10 +6,10 @@ class Config {
             porta: process.env.PORT || 3000,
             db: {
                 connectMethod: "mongodb+srv",
-                name: "",
-                url: "",
-                password: "",
-                urlParams: "?retry/Writes=true&w=majority"
+                name: "masterRPG",
+                url: "May98dsygames",
+                password: "May98dsygames",
+                username: "souza99",
             }
         }
     }

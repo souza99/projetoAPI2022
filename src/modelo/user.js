@@ -1,8 +1,7 @@
-"use strict"
+"use strict";
+const Mongoose = require("mongoose");
 
-const mongoose = requere('mongoose');
-
-module.exports = class User extends mongoose.Schema {
+module.exports = class User extends Mongoose.Schema {
     constructor () {
         super({
             nome: String,
@@ -15,6 +14,6 @@ module.exports = class User extends mongoose.Schema {
             atualizado_em: Date,
             acesso_em: Date
         })
-        mongoose.model("User", this);
+        Mongoose.model("User", this);
     }// final do construtor
 }
